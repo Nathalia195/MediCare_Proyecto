@@ -45,9 +45,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                <a class="nav-link" href="Index.aspx">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Home</span></a>
             </li>
 
             <!-- Divider -->
@@ -99,7 +99,13 @@
                     <span>Verificar requisitos</span></a>
             </li>
 
-   
+     <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
 
         </ul>
         <!-- End of Sidebar -->
