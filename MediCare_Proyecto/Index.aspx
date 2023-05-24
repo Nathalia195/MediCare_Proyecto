@@ -169,9 +169,13 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="text-align:center;align-items:center;justify-content:center">Bienvenido</h1>
-                    </div>
+                    
+<div class="d-sm-flex flex-column align-items-center justify-content-center mb-4" style="text-align: center;">
+    <img src="img/logo(5).png" style="width:350px;height:350px" />
+    <h1 class="h3 mb-0 text-gray-800">Bienvenido</h1>
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+</div>
+
 
 
                    
