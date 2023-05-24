@@ -1,7 +1,7 @@
-﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="MediCare_Proyecto.Pages.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="MediCare_Proyecto.Usuarios" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -12,16 +12,16 @@
     <meta name="author" content="">
 
     <title>MediCare Solutions</title>
- 
+
     <!-- Custom fonts for this template-->
+
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-     <link rel="icon" href="img/logo(5).png" type="image/gif" />
+
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -35,9 +35,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.aspx">
                 <div class="sidebar-brand-icon">
-                    <img style="width:150px;height:130px" src="img/logo(5).png" />
+                    <img style="width: 150px; height: 130px" src="img/logo(5).png" />
                 </div>
-               <%-- <div class="sidebar-brand-text mx-3">MediCare <sup>SA</sup></div>--%>
+                <%-- <div class="sidebar-brand-text mx-3">MediCare <sup>SA</sup></div>--%>
             </a>
 
             <!-- Divider -->
@@ -53,31 +53,29 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-       
-
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="Usuarios.aspx">
                     <i class="fas fa-fw fa-user"></i>
-                    <span> Usuarios</span>
+                    <span>Usuarios</span>
                 </a>
-              
+
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link"  href="Oferentes.aspx">
-                   
+                <a class="nav-link" href="Oferentes.aspx">
+
                     <i class="fas fa-walking"></i>
                     <span>Oferentes</span>
                 </a>
-                
+
             </li>
 
-          <%--  <!-- Divider -->
+            <%--  <!-- Divider -->
             <hr class="sidebar-divider">--%>
 
-          <%--  <!-- Heading -->
+            <%--  <!-- Heading -->
             <div class="sidebar-heading">
                 Addons
             </div>--%>
@@ -89,7 +87,7 @@
 
                     <span>Puestos</span>
                 </a>
-             
+
             </li>
 
             <!-- Nav Item - Charts -->
@@ -99,7 +97,7 @@
                     <span>Verificar requisitos</span></a>
             </li>
 
-     <!-- Divider -->
+            <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
@@ -124,14 +122,14 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                 
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                      
 
-                    
+
+
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -169,16 +167,25 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    
-<div class="d-sm-flex flex-column align-items-center justify-content-center mb-4" style="text-align: center;">
-    <img src="img/logo(5).png" style="width:350px;height:350px" />
-    <h1 class="h3 mb-0 text-gray-800">Bienvenido</h1>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-</div>
+
+
+                    <form id="form1" runat="server">
+                        <h2>Usuarios</h2>
+                        <div>
+                            <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="false" Width="90%" CssClass="gridview">
+                                <Columns>
+                                    <asp:BoundField DataField="Identificacion" HeaderText="Identificacion" />
+                                    <asp:BoundField DataField="CodigoTipoIdentificacion" HeaderText="TipoIdentificacion" />
+                                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                                    <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" />
+                                </Columns>
+                            </asp:GridView>
+
+                        </div>
+                    </form>
 
 
 
-                   
                 </div>
                 <!-- /.container-fluid -->
 
@@ -245,3 +252,4 @@
 </body>
 
 </html>
+
