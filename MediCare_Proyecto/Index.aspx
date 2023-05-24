@@ -58,8 +58,8 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Mantenimiento Usuarios</span>
+                    <i class="fas fa-fw fa-user"></i>
+                    <span> Usuarios</span>
                 </a>
               
             </li>
@@ -68,8 +68,8 @@
             <li class="nav-item">
                 <a class="nav-link"  href="#">
                    
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Mantenimiento oferentes</span>
+                    <i class="fas fa-walking"></i>
+                    <span>Oferentes</span>
                 </a>
                 
             </li>
@@ -85,8 +85,9 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Mantenimiento puestos</span>
+                    <i class="fas fa-briefcase"></i>
+
+                    <span>Puestos</span>
                 </a>
              
             </li>
