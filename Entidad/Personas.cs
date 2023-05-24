@@ -8,5 +8,7 @@ namespace Entidad
 {
     internal class Personas
     {
+
     }
+
 }
