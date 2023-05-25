@@ -13,5 +13,9 @@ namespace MediCare_Proyecto
         {
 
         }
+
+        protected void agregarPuesto_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
