@@ -6,13 +6,18 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>TrustIn</title>
+    <title>MediCare Solutions</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" />
 
-   
+     <link rel="stylesheet" href="css/style.css" />
+
+     <link rel="stylesheet" href="css/owl.carousel.min.css" />
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+   
+
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <%--<link href="../ContentNathalia/css/bootstrap/sidebar.css" rel="stylesheet" />--%>
@@ -30,24 +35,20 @@
     <form class="form-group" id="formAgregarInteres" runat="server" style="justify-content: center; align-items: center; margin-top: 150px">
         <div class="container" style="text-align: center">
             <b>
-                <h4 style="color: #8C2641">Agregar un nuevo interes</h4>
+                <h4 style="color: #8C2641">Agregar un nuevo puesto</h4>
             </b>
         </div>
         <div class="container">
             <div class="form-group">
-                <label for="ddlCategorias">Categoría:</label>
-                <asp:DropDownList ID="ddlCategorias" runat="server" CssClass="form-control">
-                    <asp:ListItem Value="1">Deportes</asp:ListItem>
-                    <asp:ListItem Value="2">Diversi&#243;n</asp:ListItem>
-                    <asp:ListItem Value="3">Comida</asp:ListItem>
-                </asp:DropDownList>
+                <label for="txtCodigoPuesto">Código del Puesto:</label>
+                <asp:TextBox ID="txtPuesto" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="txtNombreInteres">Nombre de interés:</label>
-                <asp:TextBox ID="txtNombreInteres" runat="server" CssClass="form-control"></asp:TextBox>
+                <label for="txtNombreInteres">Nombre del Puesto:</label>
+                <asp:TextBox ID="txtNombrePuesto" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="form-group" style="justify-content: center; align-items: center; text-align: center">
-                <asp:Button ID="btnAgregarInteres" runat="server" Text="Agregar" CssClass="btn btn-primary" OnClick="agregarPuesto_Click" />
+                <asp:Button ID="btnAgregarPuesto" runat="server" Text="Agregar" CssClass="btn btn-primary" OnClick="agregarPuesto_Click" />
             </div>
         </div>
     </form>

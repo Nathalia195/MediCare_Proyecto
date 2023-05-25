@@ -24,30 +24,30 @@ namespace MediCare_Proyecto
         protected global::System.Web.UI.HtmlControls.HtmlForm formAgregarInteres;
 
         /// <summary>
-        /// Control ddlCategorias.
+        /// Control txtPuesto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategorias;
+        protected global::System.Web.UI.WebControls.TextBox txtPuesto;
 
         /// <summary>
-        /// Control txtNombreInteres.
+        /// Control txtNombrePuesto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreInteres;
+        protected global::System.Web.UI.WebControls.TextBox txtNombrePuesto;
 
         /// <summary>
-        /// Control btnAgregarInteres.
+        /// Control btnAgregarPuesto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarInteres;
+        protected global::System.Web.UI.WebControls.Button btnAgregarPuesto;
     }
 }
