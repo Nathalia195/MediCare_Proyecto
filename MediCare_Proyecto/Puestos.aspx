@@ -25,7 +25,12 @@
 </head>
 
 <body id="page-top">
-
+    <style>@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
+}
+</style>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -167,27 +172,32 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-<div style="max-width: 800px; margin: 0 auto;">
-    <form id="form1" runat="server" style="width: 100%;">
-        <h2 style="text-align: center;">Puestos</h2>
-        <div style="text-align: center; margin-top: 50px; margin-bottom: 10px;">
-            <button type="button" class="btn btn-primary" style="margin-right: 10px;">
-                <i class="fas fa-plus"></i> Crear puesto
-            </button>
-            <button type="button" class="btn btn-basic">
-                <i class="fas fa-pencil-alt"></i> Modificar
-            </button>
-        </div>
-        <div style="overflow-x: auto;">
-            <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="false" CssClass="gridview" style="width: 100%;">
-                <Columns>
-                    <asp:BoundField DataField="CodigoPuesto" HeaderText="Codigo Puesto" />
-                    <asp:BoundField DataField="NombrePuesto" HeaderText="Nombre Puesto" />
-                </Columns>
-            </asp:GridView>
-        </div>
-    </form>
-</div>
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <form id="form1" runat="server" style="width: 100%;">
+                            <h2 style="text-align: center;">Puestos</h2>
+                            <div style="text-align: center; margin-top: 50px; margin-bottom: 10px;">
+                                <asp:LinkButton ID="btnAgregarPuesto" runat="server" CssClass="btn btn-primary" OnClick="btnAgregarPuesto_Click">
+    <i class="fas fa-plus"></i> Crear Puesto
+                                </asp:LinkButton>
+                          
+
+
+
+                                <asp:LinkButton ID="btnModificar" runat="server" CssClass="btn btn-warning">
+    <i class="fas fa-pencil-alt"></i> Modificar
+                                </asp:LinkButton>
+
+                            </div>
+                            <div style="overflow-x: auto;">
+                                <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="false" CssClass="gridview" Style="width: 100%;">
+                                    <Columns>
+                                        <asp:BoundField DataField="CodigoPuesto" HeaderText="Codigo Puesto" />
+                                        <asp:BoundField DataField="NombrePuesto" HeaderText="Nombre Puesto" />
+                                    </Columns>
+                                </asp:GridView>
+                            </div>
+                        </form>
+                    </div>
 
 
 
