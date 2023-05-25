@@ -86,6 +86,7 @@
     <Content Include="Oferentes.aspx" />
     <Content Include="Puestos.aspx" />
     <Content Include="registrar.aspx" />
+    <Content Include="RegistroPuestos.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
@@ -1792,6 +1793,13 @@
     </Compile>
     <Compile Include="registrar.aspx.designer.cs">
       <DependentUpon>registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPuestos.aspx.cs">
+      <DependentUpon>RegistroPuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroPuestos.aspx.designer.cs">
+      <DependentUpon>RegistroPuestos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>

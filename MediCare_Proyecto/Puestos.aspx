@@ -167,21 +167,28 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
+<div style="max-width: 800px; margin: 0 auto;">
+    <form id="form1" runat="server" style="width: 100%;">
+        <h2 style="text-align: center;">Puestos</h2>
+        <div style="text-align: center; margin-top: 50px; margin-bottom: 10px;">
+            <button type="button" class="btn btn-primary" style="margin-right: 10px;">
+                <i class="fas fa-plus"></i> Crear puesto
+            </button>
+            <button type="button" class="btn btn-basic">
+                <i class="fas fa-pencil-alt"></i> Modificar
+            </button>
+        </div>
+        <div style="overflow-x: auto;">
+            <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="false" CssClass="gridview" style="width: 100%;">
+                <Columns>
+                    <asp:BoundField DataField="CodigoPuesto" HeaderText="Codigo Puesto" />
+                    <asp:BoundField DataField="NombrePuesto" HeaderText="Nombre Puesto" />
+                </Columns>
+            </asp:GridView>
+        </div>
+    </form>
+</div>
 
-
-                    <form id="form1" runat="server">
-                        <h2>Puestos</h2>
-                        <div>
-                            <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="false" Width="90%" CssClass="gridview">
-                                <Columns>
-                                    <asp:BoundField DataField="CodigoPuesto" HeaderText="Codigo Puesto" />
-                                    <asp:BoundField DataField="NombrePuesto" HeaderText="Nombre Puesto" />
-
-                                </Columns>
-                            </asp:GridView>
-
-                        </div>
-                    </form>
 
 
 
