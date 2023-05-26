@@ -24,7 +24,7 @@
 
             </div>
             <div style="overflow-x: auto;">
-                <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="false" CssClass="gridview" Style="width: 100%;">
+              <asp:GridView ID="gvPuesto" runat="server" AutoGenerateColumns="False" Width="100%" class="table table-striped table-hover" OnRowCommand="gv_puesto_RowCommand">
                     <Columns>
                         <asp:BoundField DataField="CodigoPuesto" HeaderText="Codigo Puesto" />
                         <asp:BoundField DataField="NombrePuesto" HeaderText="Nombre Puesto" />

@@ -10,11 +10,11 @@ namespace Negocio
 {
     public class Negocio_Puesto
     {
-        DatosPuesto obj_datosPuesto = new DatosPuesto();
+        DatosPuesto obj_Puesto = new DatosPuesto();
 
         public List<EntidadPuesto> GetPuesto()
         {
-            return obj_datosPuesto.GetPuesto();
+            return obj_Puesto.GetPuesto();
         }
     }
 }

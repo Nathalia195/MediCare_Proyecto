@@ -40,26 +40,21 @@ namespace Datos
             {
                 using (SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["cnx"].ToString()))
                 {
-                    //ABRIMOS LA CONEXION
+                    // ABRIMOS LA CONEXION
                     cnx.Open();
 
-                    //DECLARAMOS LA CONSULTA
-                    string sqlQuery = "sp_Autentificacionn";
+                    // DECLARAMOS LA CONSULTA
+                    string sqlQuery = "sp_Autentificacion";
 
-                    //LE MANDAMOS LA CONSULTA A LA BASE DE DATOS
+                    // LE MANDAMOS LA CONSULTA A LA BASE DE DATOS
                     using (SqlCommand cmd = new SqlCommand(sqlQuery, cnx))
                     {
-                        //AGREGARON LOS PARAMETROS
+                        // AGREGAMOS LOS PARÁMETROS
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@NombreUsuario", Usuario.NombreUsuario);
                         cmd.Parameters.AddWithValue("@Contrasena", Usuario.Contrasena);
 
-<<<<<<< HEAD
                         SqlDataReader dr = cmd.ExecuteReader();
-=======
-                        //DECLARAMOS LA CONSULTA
-                        string sqlQuery = "sp_Autentificacion";
->>>>>>> b6b670685593a61c97bff3500e0fb5dd9934fb02
 
                         if (dr.Read())
                         {
@@ -76,8 +71,8 @@ namespace Datos
             {
                 throw new Exception(ex.Message);
             }
-
         }
+
 
         public byte[] TraerAvatar(EntidadUsuario Usuario)
         {
