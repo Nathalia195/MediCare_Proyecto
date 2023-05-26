@@ -54,7 +54,12 @@ namespace Datos
                         cmd.Parameters.AddWithValue("@NombreUsuario", Usuario.NombreUsuario);
                         cmd.Parameters.AddWithValue("@Contrasena", Usuario.Contrasena);
 
+<<<<<<< HEAD
                         SqlDataReader dr = cmd.ExecuteReader();
+=======
+                        //DECLARAMOS LA CONSULTA
+                        string sqlQuery = "sp_Autentificacion";
+>>>>>>> b6b670685593a61c97bff3500e0fb5dd9934fb02
 
                         if (dr.Read())
                         {
