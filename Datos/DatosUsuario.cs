@@ -13,6 +13,11 @@ namespace Datos
     public class DatosUsuario
     {
         public string cnx;
+
+
+        EntidadUsuario mcEntidad = new EntidadUsuario();
+        SqlCommand cmd = new SqlCommand();
+        bool vexito;
         public DatosUsuario()
         {
             cnx = ConfigurationManager.ConnectionStrings["cnx"].ConnectionString;
@@ -29,47 +34,44 @@ namespace Datos
         //    }
         //}
 
-
-
-
         public string Autentificacion(EntidadUsuario Usuario)
+        {
+            try
             {
-                try
-               {
-                    using (SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["cnx"].ToString()))
+                using (SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["cnx"].ToString()))
+                {
+                    //ABRIMOS LA CONEXION
+                    cnx.Open();
+
+                    //DECLARAMOS LA CONSULTA
+                    string sqlQuery = "sp_Autentificacionn";
+
+                    //LE MANDAMOS LA CONSULTA A LA BASE DE DATOS
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, cnx))
                     {
-                        //ABRIMOS LA CONEXION
-                        cnx.Open();
+                        //AGREGARON LOS PARAMETROS
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@NombreUsuario", Usuario.NombreUsuario);
+                        cmd.Parameters.AddWithValue("@Contrasena", Usuario.Contrasena);
 
-                        //DECLARAMOS LA CONSULTA
-                        string sqlQuery = "sp_Autentificacionn";
+                        SqlDataReader dr = cmd.ExecuteReader();
 
-                        //LE MANDAMOS LA CONSULTA A LA BASE DE DATOS
-                        using (SqlCommand cmd = new SqlCommand(sqlQuery, cnx))
-                       {
-                            //AGREGARON LOS PARAMETROS
-                            cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@NombreUsuario", Usuario.NombreUsuario);
-                            cmd.Parameters.AddWithValue("@Contrasena", Usuario.Contrasena);
-
-                           SqlDataReader dr = cmd.ExecuteReader();
-
-                          if (dr.Read())
-                            {
-                                return dr["Nombre"].ToString();
-                            }
-                            else
-                            {
-                                return "";
-                            }
+                        if (dr.Read())
+                        {
+                            return dr["Nombre"].ToString();
+                        }
+                        else
+                        {
+                            return "";
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-            
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public byte[] TraerAvatar(EntidadUsuario Usuario)
@@ -147,8 +149,6 @@ namespace Datos
                 throw new Exception(ex.Message);
             }
         }
-
-
 
 
     }
