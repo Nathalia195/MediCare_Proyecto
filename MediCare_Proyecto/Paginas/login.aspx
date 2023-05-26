@@ -40,23 +40,23 @@
                 <div class="col-lg-12">
                     <div class="p-4">
                         <div class="text-center">
-                            <img src="../img/logo(5).png" alt="Logo" style="width:250px;height:200px">
+                            <img src="../img/logo(5).png" alt="Logo" style="width: 250px; height: 200px">
                             <h2 class="h4 text-gray-900 mb-4">Inicio de Sesión</h2>
                         </div>
                         <form class="user" runat="server">
                             <div class="form-group">
 
-                                <asp:TextBox ID="Txt_usuario"  runat="server" class="form-control form-control-user"
-                                     aria-describedby="emailHelp"
+                                <asp:TextBox ID="Txt_usuario" runat="server" class="form-control form-control-user"
+                                    aria-describedby="emailHelp"
                                     placeholder="Usuario" autocomplete="off"></asp:TextBox>
-                               </div> 
+                            </div>
                             <div class="form-group">
 
                                 <asp:TextBox ID="Txt_contrasena" runat="server" type="password" class="form-control form-control-user"
                                     placeholder="Contraseña" autocomplete="off"></asp:TextBox>
-                                
+
                             </div>
-                          <%--  <div class="form-group">
+                            <%--  <div class="form-group">
                                 <div class="custom-control custom-checkbox small">
                                     <input type="checkbox" class="custom-control-input" id="customCheck">
                                     <label class="custom-control-label" for="customCheck">
@@ -65,14 +65,10 @@
                                 </div>
                             </div>--%>
                             <asp:Button class="btn btn-primary btn-user btn-block" ID="Btn_Ingresar" runat="server" Text="Login" OnClick="Btn_Ingresar_Click" />
-                            
+
                             <hr>
                         </form>
                         <hr>
-                        
-                        <div class="text-center">
-                            <a class="small" href="registrar.aspx">Registrar una cuenta!</a>
-                        </div>
                     </div>
                 </div>
             </div>

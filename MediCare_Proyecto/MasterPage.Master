@@ -71,6 +71,7 @@
                     </li>
                 </ul>
                 <!-- End of Sidebar -->
+                <!-- End of Sidebar -->
 
                 <!-- Content Wrapper -->
                 <div id="content-wrapper" class="d-flex flex-column">
@@ -78,9 +79,9 @@
                     <div id="content">
                         <!-- Topbar -->
                         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                            <!-- Sidebar Toggle (Topbar) -->
-                            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <!-- Sidebar Toggle  <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                                 <i class="fa fa-bars"></i>
+                            </button>i>
                             </button>
 
                             <!-- Topbar Navbar -->
@@ -99,17 +100,18 @@
                                         <a class="dropdown-item" href="#">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Perfil
-                                        </a>
+   
 
                                         <a class="dropdown-item" href="#">
                                             <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Ajustes
                                         </a>
+                                   </a>
 
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Logout
+   Logout                            Cerrar Sesión
                                         </a>
                                     </div>
                                 </li>
@@ -164,10 +166,7 @@
                             <a class="btn btn-primary" href="login.aspx">Logout</a>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Bootstrap core JavaScript-->
+                 <!-- Bootstrap core JavaScript-->
             <script src="vendor/jquery/jquery.min.js"></script>
             <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -184,7 +183,15 @@
 
             <!-- Page level custom scripts -->
             <script src="js/dm/chart-area-demo.js"></script>
-            <script src="js/dm/chart-pie-demo.js"></script>
+            <script src="js/dm/chart-pie-demo.js"></script>plementar estos cambios, es posible que haya otros problemas en tu código o en la configuración de tu página. En ese caso, te recomendaría revisar la consola del navegador para ver si hay errores o conflictos que puedan estar afectando la funcionalidad.
+
+
+
+
+
+
+
+
         </div>
     </form>
 </body>

@@ -42,7 +42,7 @@ namespace Datos
                         cnx.Open();
 
                         //DECLARAMOS LA CONSULTA
-                        string sqlQuery = "sp_Autentificacionn";
+                        string sqlQuery = "sp_Autentificacion";
 
                         //LE MANDAMOS LA CONSULTA A LA BASE DE DATOS
                         using (SqlCommand cmd = new SqlCommand(sqlQuery, cnx))
