@@ -14,13 +14,13 @@
     <title>Inicio de Sesión</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-gradient-primary">
@@ -40,13 +40,13 @@
                 <div class="col-lg-12">
                     <div class="p-4">
                         <div class="text-center">
-                            <img src="img/logo(5).png" alt="Logo" style="width:250px;height:200px">
+                            <img src="../img/logo(5).png" alt="Logo" style="width:250px;height:200px">
                             <h2 class="h4 text-gray-900 mb-4">Inicio de Sesión</h2>
                         </div>
                         <form class="user" runat="server">
                             <div class="form-group">
 
-                                <asp:TextBox ID="Txt_usuario" type="email" runat="server" class="form-control form-control-user"
+                                <asp:TextBox ID="Txt_usuario"  runat="server" class="form-control form-control-user"
                                      aria-describedby="emailHelp"
                                     placeholder="Usuario" autocomplete="off"></asp:TextBox>
                                </div> 
@@ -84,14 +84,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="../js/sb-admin-2.min.js"></script>
 
 </body>
 

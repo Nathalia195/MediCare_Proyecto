@@ -11,7 +11,7 @@
 
      <link rel="stylesheet" href="css/style.css" />
 
-     <link rel="stylesheet" href="css/owl.carousel.min.css" />
+     <link rel="stylesheet" href="../css/owl.carousel.min.css" />
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
 
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <%--<link href="../ContentNathalia/css/bootstrap/sidebar.css" rel="stylesheet" />--%>
 
 </head>
@@ -52,19 +52,7 @@
             </div>
         </div>
     </form>
-    <%--    <footer class="text-center text-white" style="background-color: #f1f1f1;">
-        <!-- Grid container -->
-
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center text-dark p-3" style="background-color: #FAACC4; position: fixed; bottom: -30px; width: 100%">
-            © 2023 Copyright:
-    <p class="text-dark">Desarrollado por William Rodríguez-Brenda Quesada-Nathalia Ramírez</p>
-
-        </div>
-        <!-- Copyright -->
-    </footer>--%>
+   
     <script>
         function agregarPuesto() {
             // Obtener los valores de los campos del formulario

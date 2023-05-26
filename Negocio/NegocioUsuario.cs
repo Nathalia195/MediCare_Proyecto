@@ -24,9 +24,19 @@ namespace Negocio
             }
         }
 
+        public byte[] TraerAvatar(EntidadUsuario Usuario)
+        {
+            return obj_datos.TraerAvatar(Usuario);
+        }
+
         private string ValidarUsuario(EntidadUsuario Usuario)
         {
             if (string.IsNullOrEmpty(Usuario.NombreUsuario) || string.IsNullOrEmpty(Usuario.Contrasena)) return ""; else return "ok";
+        }
+
+        public List<EntidadUsuario> GetUsuario()
+        {
+            return obj_datos.GetUsuario();
         }
     }
 }

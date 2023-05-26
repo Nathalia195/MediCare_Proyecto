@@ -12,11 +12,11 @@ namespace Datos
 {
     public class DatosUsuario
     {
-        //public string cnx;
-        //public DatosUsuario()
-        //{
-        //    cnx = ConfigurationManager.ConnectionStrings["cnx"].ConnectionString;
-        //}
+        public string cnx;
+        public DatosUsuario()
+        {
+            cnx = ConfigurationManager.ConnectionStrings["cnx"].ConnectionString;
+        }
 
         //public IEnumerable<EntidadPuesto> Autenticacion()
         //{
@@ -36,13 +36,13 @@ namespace Datos
             {
                 try
                {
-                    using (SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["cnnString"].ToString()))
+                    using (SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["cnx"].ToString()))
                     {
                         //ABRIMOS LA CONEXION
                         cnx.Open();
 
                         //DECLARAMOS LA CONSULTA
-                        string sqlQuery = "sp_Autentificacion";
+                        string sqlQuery = "sp_Autentificacionn";
 
                         //LE MANDAMOS LA CONSULTA A LA BASE DE DATOS
                         using (SqlCommand cmd = new SqlCommand(sqlQuery, cnx))
@@ -71,5 +71,85 @@ namespace Datos
                 }
             
         }
+
+        public byte[] TraerAvatar(EntidadUsuario Usuario)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["cnx"].ToString()))
+                {
+                    //ABRIMOS LA CONEXION
+                    cnx.Open();
+
+                    //DECLARAMOS LA CONSULTA
+                    string sqlQuery = "sp_getAvatar";
+
+                    //LE MANDAMOS LA CONSULTA A LA BASE DE DATOS
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, cnx))
+                    {
+                        //AGREGARON LOS PARAMETROS
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@NombreUsuario", SqlDbType.VarChar, 50).Value = Usuario.NombreUsuario;
+
+                        SqlDataReader dr = cmd.ExecuteReader();
+
+                        if (dr.Read())
+                        {
+                            byte[] imagen = (byte[])dr["Imagen"];
+                            return imagen;
+                        }
+                    }
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<EntidadUsuario> GetUsuario()
+        {
+            List<EntidadUsuario> usuarios = new List<EntidadUsuario>();
+
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["cnx"].ToString()))
+                {
+                    //ABRIMOS LA CONEXION
+                    cnx.Open();
+
+                    //DECLARAMOS LA CONSULTA
+                    string sqlQuery = "sp_getUsuario";
+
+                    //LE MANDAMOS LA CONSULTA A LA BASE DE DATOS
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, cnx))
+                    {
+                        SqlDataReader dr = cmd.ExecuteReader();
+
+                        while (dr.Read())
+                        {
+                            EntidadUsuario entidadUsuario = new EntidadUsuario
+                            {
+                                NombreUsuario = Convert.ToString(dr["NombreUsuario"]),
+                                NombreCompleto = Convert.ToString(dr["NombreCompleto"]),
+                                CorreoElectronico = Convert.ToString(dr["CorreoElectronico"]),
+                                CodigoEstado = Convert.ToString(dr["NombreEstado"])
+                            };
+                            usuarios.Add(entidadUsuario);
+                        }
+                    }
+                }
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+
+
     }
 }

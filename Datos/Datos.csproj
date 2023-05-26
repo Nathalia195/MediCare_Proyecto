@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="claseYari{.cs" />
+    <Compile Include="DatosEstado.cs" />
+    <Compile Include="DatosRol.cs" />
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

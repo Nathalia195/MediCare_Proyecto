@@ -11,7 +11,7 @@ namespace MediCare_Proyecto
 {
 
 
-    public partial class Oferentes
+    public partial class Formulario_web12
     {
 
         /// <summary>

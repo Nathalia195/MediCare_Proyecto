@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="registrar.aspx.cs" Inherits="MediCare_Proyecto.registrar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MostrarImagen.aspx.cs" Inherits="MediCare_Proyecto.Paginas.Mostrarimagen" %>
 
 <!DOCTYPE html>
 

@@ -74,6 +74,10 @@
     <Content Include="css\sb-admin-2.min.css" />
     <Content Include="css\style.css" />
     <Content Include="css\stylecss.css" />
+    <Content Include="Paginas\Puesto.aspx" />
+    <Content Include="Paginas\Oferentes.aspx" />
+    <Content Include="Paginas\MantUsuario.aspx" />
+    <Content Include="Paginas\Index.aspx" />
     <Content Include="img\logo%281%29.png" />
     <Content Include="img\logo%282%29.png" />
     <Content Include="img\logo%283%29.png" />
@@ -85,12 +89,9 @@
     <Content Include="js\dm\datatables-demo.js" />
     <Content Include="js\sb-admin-2.js" />
     <Content Include="js\sb-admin-2.min.js" />
-    <Content Include="login.aspx" />
-    <Content Include="Oferentes.aspx" />
-    <Content Include="Puestos.aspx" />
-    <Content Include="registrar.aspx" />
-    <Content Include="RegistroPuestos.aspx" />
-    <Content Include="Usuarios.aspx" />
+    <Content Include="Paginas\login.aspx" />
+    <Content Include="Paginas\MostrarImagen.aspx" />
+    <Content Include="Paginas\RegistroPuestos.aspx" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.js" />
@@ -1757,59 +1758,65 @@
     <Content Include="vendor\jquery\jquery.min.js" />
     <Content Include="vendor\jquery\jquery.slim.js" />
     <Content Include="vendor\jquery\jquery.slim.min.js" />
-    <Content Include="Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Paginas\Puesto.aspx.cs">
+      <DependentUpon>Puesto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Paginas\Puesto.aspx.designer.cs">
+      <DependentUpon>Puesto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Oferentes.aspx.cs">
+    <Compile Include="Paginas\Oferentes.aspx.cs">
       <DependentUpon>Oferentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Oferentes.aspx.designer.cs">
+    <Compile Include="Paginas\Oferentes.aspx.designer.cs">
       <DependentUpon>Oferentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\MantUsuario.aspx.cs">
+      <DependentUpon>MantUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\MantUsuario.aspx.designer.cs">
+      <DependentUpon>MantUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\MostrarImagen.aspx.cs">
+      <DependentUpon>MostrarImagen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\MostrarImagen.aspx.designer.cs">
+      <DependentUpon>MostrarImagen.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Puestos.aspx.cs">
-      <DependentUpon>Puestos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Puestos.aspx.designer.cs">
-      <DependentUpon>Puestos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="registrar.aspx.cs">
-      <DependentUpon>registrar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="registrar.aspx.designer.cs">
-      <DependentUpon>registrar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RegistroPuestos.aspx.cs">
+    <Compile Include="Paginas\RegistroPuestos.aspx.cs">
       <DependentUpon>RegistroPuestos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RegistroPuestos.aspx.designer.cs">
+    <Compile Include="Paginas\RegistroPuestos.aspx.designer.cs">
       <DependentUpon>RegistroPuestos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios.aspx.cs">
-      <DependentUpon>Usuarios.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usuarios.aspx.designer.cs">
-      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1985,6 +1992,7 @@
     <Content Include="vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="vendor\jquery\jquery.min.map" />
     <Content Include="vendor\jquery\jquery.slim.min.map" />
+    <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

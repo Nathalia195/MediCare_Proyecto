@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MediCare_Proyecto.Pages
+namespace MediCare_Proyecto
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class Formulario_web13 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
