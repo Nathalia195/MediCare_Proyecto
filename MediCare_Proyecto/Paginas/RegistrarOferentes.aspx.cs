@@ -7,15 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace MediCare_Proyecto
 {
-    public partial class RegistroPuestos : System.Web.UI.Page
+    public partial class Formulario_web14 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void agregarPuesto_Click(object sender, EventArgs e)
-        {
         }
     }
 }
