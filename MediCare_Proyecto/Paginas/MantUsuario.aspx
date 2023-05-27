@@ -12,13 +12,16 @@
                                 <h2>Mantenimiento Usuarios</h2>
                             </div>
                             <div class="col-sm-6">
-                                <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar nuevo usuario</span></a>
+                            <%--    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar nuevo usuario</span></a>--%>
+                                <asp:Button href="AgregarUsuario.aspx" ID="btnAgregarUsuario" runat="server" Text="Agregar usuario" class="btn btn-success" data-toggle="modal" OnClick="redi"/>
+                              
                             </div>
+                           
                         </div>
                     </div>
 
                     <div>
-                        <asp:GridView ID="Dgv_usuario" runat="server" AutoGenerateColumns="False" Width="100%" class="table table-striped table-hover" OnRowCommand="Dgv_usuario_RowCommand">
+                        <asp:GridView ID="Dgv_usuario" runat="server" AutoGenerateColumns="False" Width="100%" class="table table-striped table-hover" OnRowCommand="Dgv_usuario_RowCommand" >
                             <Columns>
                                 <asp:BoundField DataField="NombreUsuario" HeaderText="Nombre usuario" />
                                 <asp:BoundField DataField="NombreCompleto" HeaderText="Nombre completo" />
@@ -39,4 +42,6 @@
 
     
     </body>
+
 </asp:Content>
+

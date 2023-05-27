@@ -3,6 +3,7 @@ using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -20,17 +21,20 @@ namespace MediCare_Proyecto
         string url;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string username = Session["username"].ToString();
+            string fullname = Session["fullname"].ToString();
+            string rol = Session["rol"].ToString();
             if (!IsPostBack)
             {
-                string myVar = obj_general.Decrypt(HttpUtility.UrlDecode(Request.QueryString["MyVar"]));
+                //string myVar = obj_general.Decrypt(HttpUtility.UrlDecode(Request.QueryString["MyVar"]));
 
-                if (!string.IsNullOrEmpty(myVar))
+                if (!string.IsNullOrEmpty(rol))
                 {
-                    url = myVar;
+                    //url = myVar;
                     //myVar.Split(',')[0]; NombreUsuario
                     //myVar.Split(',')[1]; NombreCompleto
                     //myVar.Split(',')[2]; Rol
-                    if (myVar.Split(',')[2] != "AD")
+                    if (rol != "AD")
                     {
                         MostrarMensaje("Lo sentimos, usted no tiene acceso a este mantenimiento");
                     }
@@ -90,7 +94,9 @@ namespace MediCare_Proyecto
             {
                 int fila = Convert.ToInt32(e.CommandArgument);
                 string columna = Dgv_usuario.Rows[fila].Cells[0].Text;
-               
+                Session["llave"] = columna;
+
+                Response.Redirect("AgregarUsuario.aspx");
             }
             else
             {
@@ -103,10 +109,14 @@ namespace MediCare_Proyecto
             }
         }
 
-   
-    
 
 
 
+        protected void redi(object sender, EventArgs e)
+        {
+            Response.Redirect("AgregarUsuario.aspx");
+        }
+
+        
     }
 }
