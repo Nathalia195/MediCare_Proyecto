@@ -12,6 +12,13 @@ namespace MediCare_Proyecto
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
         }
+
+        //protected void btnRistoferente_Click(object sender, EventArgs e)
+        //{
+        //    string script = "window.open('RegistroOferente.aspx', 'Registrar Oferente', 'width=500,height=500');";
+        //    ClientScript.RegisterStartupScript(this.GetType(), "OpenWindow", script, true);
+        //}
     }
 }

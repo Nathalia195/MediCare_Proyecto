@@ -32,7 +32,7 @@ namespace MediCare_Proyecto
 
         protected void Btn_oferente(object sender, EventArgs e)
         {
-            //Response.Redirect("MantenimientoUsuario.aspx?MyVar=" + HttpUtility.UrlEncode(obj_general.Encrypt("1," + Lbl_usuario.Text)));            
+            Response.Redirect("Oferentes.aspx?MyVar=" + HttpUtility.UrlEncode(obj_general.Encrypt(url)));
         }
 
         protected void Btn_puesto(object sender, EventArgs e)
