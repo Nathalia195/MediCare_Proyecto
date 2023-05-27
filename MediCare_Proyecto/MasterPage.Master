@@ -185,12 +185,7 @@
             <script src="js/dm/chart-area-demo.js"></script>
             <script src="js/dm/chart-pie-demo.js"></script>plementar estos cambios, es posible que haya otros problemas en tu código o en la configuración de tu página. En ese caso, te recomendaría revisar la consola del navegador para ver si hay errores o conflictos que puedan estar afectando la funcionalidad.
 
-
-
-
-
-
-
+             <script src="js/prueba.js"></script>
 
         </div>
     </form>

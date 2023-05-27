@@ -12,6 +12,8 @@ namespace Entidad
         public string NombreCompleto { get; set; }
         public string CorreoElectronico { get; set; }
         public string Contrasena { get; set; }
+
+        public byte[] Imagen { get; set; }
         public string CodigoRol { get; set; }
         public string CodigoEstado { get; set; }
     }
