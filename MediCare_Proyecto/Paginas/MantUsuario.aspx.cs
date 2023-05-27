@@ -64,7 +64,7 @@ namespace MediCare_Proyecto
                 }
                 else
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("login.aspx");
                 }
             }
         }

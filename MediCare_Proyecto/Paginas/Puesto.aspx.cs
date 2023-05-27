@@ -53,7 +53,7 @@ namespace MediCare_Proyecto
                 }
                 else
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("login.aspx");
                 }
             }
         }
@@ -69,11 +69,11 @@ namespace MediCare_Proyecto
             script += "'; }";
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "alert", script, true);
         }
-        protected void btnAgregarPuesto_Click(object sender, EventArgs e)
-        {
-            string script = "window.open('RegistroPuestos.aspx', 'Agregar Puesto', 'width=500,height=500');";
-            ClientScript.RegisterStartupScript(this.GetType(), "OpenWindow", script, true);
-        }
+        //protected void btnAgregarPuesto_Click(object sender, EventArgs e)
+        //{
+        //    //string script = "window.open('NuevoPuesto.aspx', 'Agregar Puesto', 'width=500,height=500');";
+        //    //ClientScript.RegisterStartupScript(this.GetType(), "OpenWindow", script, true);
+        //}
         protected void gv_puesto_RowCommand(object sender, System.Web.UI.WebControls.GridViewCommandEventArgs e)
         {
             if (e.CommandName == "Select")

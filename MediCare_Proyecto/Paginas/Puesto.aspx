@@ -11,9 +11,9 @@
 
             <h2 style="text-align: center;">Puestos</h2>
             <div style="text-align: center; margin-top: 50px; margin-bottom: 10px;">
-                <asp:LinkButton ID="btnAgregarPuesto" runat="server" CssClass="btn btn-primary" OnClick="btnAgregarPuesto_Click">
-    <i class="fas fa-plus"></i> Crear Puesto
-                </asp:LinkButton>
+             <a id="btnAgregarPuesto" runat="server" class="btn btn-primary" href="NuevoPuesto.aspx" >
+    <i class="fas fa-plus"></i> Crear Puesto</a>
+
 
 
 

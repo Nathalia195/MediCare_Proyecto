@@ -21,7 +21,7 @@ namespace MediCare_Proyecto
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAgregarPuesto;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnAgregarPuesto;
 
         /// <summary>
         /// Control btnModificar.
