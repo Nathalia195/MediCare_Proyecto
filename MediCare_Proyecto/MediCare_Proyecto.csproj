@@ -74,8 +74,7 @@
     <Content Include="css\sb-admin-2.min.css" />
     <Content Include="css\style.css" />
     <Content Include="css\stylecss.css" />
-    <Content Include="Paginas\AgregarUsuario.aspx" />
-    <Content Include="js\prueba.js" />
+    <Content Include="Paginas\RegistrarOferentes.aspx" />
     <Content Include="Paginas\Puesto.aspx" />
     <Content Include="Paginas\Oferentes.aspx" />
     <Content Include="Paginas\MantUsuario.aspx" />
@@ -1763,12 +1762,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Paginas\AgregarUsuario.aspx.cs">
-      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    <Compile Include="Paginas\RegistrarOferentes.aspx.cs">
+      <DependentUpon>RegistrarOferentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\AgregarUsuario.aspx.designer.cs">
-      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    <Compile Include="Paginas\RegistrarOferentes.aspx.designer.cs">
+      <DependentUpon>RegistrarOferentes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Puesto.aspx.cs">
       <DependentUpon>Puesto.aspx</DependentUpon>
