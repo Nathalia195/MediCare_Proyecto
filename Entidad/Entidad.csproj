@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntidadEstado.cs" />
-    <Compile Include="EntidadPrueba.cs" />
+    <Compile Include="EntidadOferente.cs" />
     <Compile Include="EntidadPuesto.cs" />
     <Compile Include="EntidadUsuario.cs" />
     <Compile Include="EntidadRol.cs" />

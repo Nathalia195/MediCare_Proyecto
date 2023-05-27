@@ -35,7 +35,10 @@ namespace MediCare_Proyecto
                 }
                 else
                 {
-                    Response.Redirect("Index.aspx?MyVar=" + HttpUtility.UrlEncode(Encrypt(Mensaje)));
+                    Session["username"] = Mensaje.Split(',')[0];
+                    Session["fullname"] = Mensaje.Split(',')[1];
+                    Session["rol"] = Mensaje.Split(',')[2];
+                    Response.Redirect("Index.aspx");
                 }
             }
             catch (Exception ex)

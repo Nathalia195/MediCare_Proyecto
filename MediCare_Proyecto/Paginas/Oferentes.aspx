@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <body id="page-top">
+  
 
     
            
@@ -10,21 +10,36 @@
 
                     <!-- Page Heading -->
 
+                     <div style="max-width: 800px; margin: 0 auto;">
 
-                    <form id="form1" runat="server">
-                        <h2>Oferentes</h2>
+            <h2 style="text-align: center;">Oferente</h2>
+            <div style="text-align: center; margin-top: 50px; margin-bottom: 10px;">
+                <asp:LinkButton ID="btnRistoferente" runat="server" CssClass="btn btn-primary" >
+    <i class="fas fa-plus"></i> Registrar Oferente
+                </asp:LinkButton>
+
+
+
+
+                <asp:LinkButton ID="btnModificar" runat="server" CssClass="btn btn-warning">
+    <i class="fas fa-pencil-alt"></i> Modificar
+                </asp:LinkButton>
+                
+                       
                         <div>
-                            <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="false" Width="90%" CssClass="gridview">
+                            <asp:GridView ID="gvOferentes" runat="server" AutoGenerateColumns="false" Width="90%" CssClass="gridview">
                                 <Columns>
-                                    <asp:BoundField DataField="CodigoPuesto" HeaderText="Codigo Puesto" />
-                                    <asp:BoundField DataField="NombrePuesto" HeaderText="Nombre Puesto" />
+                                    <asp:BoundField DataField="Identificacion" HeaderText="Identificacion" />
+                                    <asp:BoundField DataField="CodigoTipoIdentificacion" HeaderText="Tipo Identificacion" />
+                                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                                    <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" />
+
 
                                 </Columns>
                             </asp:GridView>
 
                         </div>
-                    </form>
-
+                 
 
 
                 </div>
@@ -33,24 +48,11 @@
      
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; MediCare Solutions 2023</span>
-                    </div>
-                </div>
-            </footer>
+       
             <!-- End of Footer -->
      
         <!-- End of Content Wrapper -->
 
 
-    <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-</body>
 </asp:Content>

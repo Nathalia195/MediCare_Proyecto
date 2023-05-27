@@ -38,5 +38,16 @@ namespace Negocio
         {
             return obj_datos.GetUsuario();
         }
+
+
+        public void InsertarUsuarios(EntidadUsuario mcEntidad)
+        {
+            obj_datos.InsertarUsuario(mcEntidad);
+        }
+        public void Editar(EntidadUsuario mcEntidad)
+        {
+            obj_datos.EditarUsuario(mcEntidad);
+        }
+
     }
 }
