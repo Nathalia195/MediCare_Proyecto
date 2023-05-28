@@ -46,13 +46,13 @@
                         <form class="user" runat="server">
                             <div class="form-group">
 
-                                <asp:TextBox ID="Txt_usuario" runat="server" class="form-control form-control-user"
+                                <asp:TextBox ID="Txt_usuario" runat="server" required="true" class="form-control form-control-user"
                                     aria-describedby="emailHelp"
                                     placeholder="Usuario" autocomplete="off"></asp:TextBox>
                             </div>
                             <div class="form-group">
 
-                                <asp:TextBox ID="Txt_contrasena" runat="server" type="password" class="form-control form-control-user"
+                                <asp:TextBox ID="Txt_contrasena" runat="server" type="password" required="true" class="form-control form-control-user"
                                     placeholder="Contraseña" autocomplete="off"></asp:TextBox>
 
                             </div>

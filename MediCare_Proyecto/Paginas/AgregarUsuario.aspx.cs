@@ -2,8 +2,6 @@
 using Negocio;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -12,19 +10,15 @@ namespace MediCare_Proyecto
     public partial class Formulario_web14 : System.Web.UI.Page
     {
 
-        private bool Editar = false;
-
         NegocioUsuario NegocioUsuario = new NegocioUsuario(); 
-
         NegocioEstado neg = new NegocioEstado();
-
         NegocioRol roles = new NegocioRol();  
 
         EntidadUsuario obj = new EntidadUsuario();
         protected void Page_Load(object sender, EventArgs e)
         {
           
-
+            
             if (Session["llave"]!= null) {
                 string llaves = Session["llave"].ToString();
                 txtNombreUsuario.Text = llaves;
@@ -38,6 +32,8 @@ namespace MediCare_Proyecto
                 txtCodigoEstado.Items.Insert(i, new ListItem(c.NombreEstado, c.CodigoEstado));
                 i += 1;
             }
+
+
             List<EntidadRol> rol = roles.GetRol();
             i = 0;
             foreach (EntidadRol c in rol)
@@ -52,17 +48,18 @@ namespace MediCare_Proyecto
            
                 try
                 {
-                obj.NombreUsuario= txtNombreUsuario.Text ;
-                obj.NombreCompleto = txtNombreCompleto.Text ;
-                obj.CorreoElectronico= txtCorreoElectronico.Text  ;
-                obj.Contrasena = txtlContrasena.Text ;
-                obj.Imagen = FileUpload1.FileBytes;
-                obj.CodigoRol =  txtCodigoRol.SelectedValue ;
-                obj.CodigoEstado = txtCodigoEstado.SelectedValue;
+                    obj.NombreUsuario= txtNombreUsuario.Text ;
+                    obj.NombreCompleto = txtNombreCompleto.Text ;
+                    obj.CorreoElectronico= txtCorreoElectronico.Text  ;
+                    obj.Contrasena = txtlContrasena.Text ;
+                    obj.Imagen = FileUpload1.FileBytes;
+                    obj.CodigoRol =  txtCodigoRol.SelectedValue ;
+                    obj.CodigoEstado = txtCodigoEstado.SelectedValue;
 
 
-                    NegocioUsuario.InsertarUsuarios(obj);
-                    MostrarMensaje("El usuario se guardo correctamente");
+
+                   string mensaje = NegocioUsuario.InsertarUsuarios(obj);
+                  MostrarMensaje(mensaje);
               
                     //limpiarForm();
                 }
@@ -87,5 +84,9 @@ namespace MediCare_Proyecto
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "alert", script, true);
         }
 
+        protected void txtCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MantUsuario.aspx");
+        }
     }
 }
