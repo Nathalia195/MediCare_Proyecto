@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace MediCare_Proyecto
 {
-    public partial class Formulario_web14 : System.Web.UI.Page
+    public partial class Formulario_web15 : System.Web.UI.Page
     {
         NegocioGeneral obj_general = new NegocioGeneral();
         Negocio_Puesto obj_Puesto = new Negocio_Puesto();
@@ -17,7 +17,6 @@ namespace MediCare_Proyecto
         {
 
         }
-
         protected void agregarPuesto_Click(object sender, EventArgs e)
         {
             //string script = "window.open('NuevoPuesto.aspx', 'Agregar Puesto', 'width=500,height=500');";

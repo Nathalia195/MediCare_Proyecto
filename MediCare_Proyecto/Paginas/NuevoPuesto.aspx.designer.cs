@@ -11,7 +11,7 @@ namespace MediCare_Proyecto
 {
 
 
-    public partial class Formulario_web14
+    public partial class Formulario_web15
     {
 
         /// <summary>
