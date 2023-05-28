@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="NuevoPuesto.aspx.cs" Inherits="MediCare_Proyecto.Formulario_web14" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="NuevoPuesto.aspx.cs" Inherits="MediCare_Proyecto.Formulario_web15" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="../css/owl.carousel.min.css" />
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -36,6 +35,5 @@
                 <asp:Button ID="btnAgregarPuesto" runat="server" Text="Agregar" CssClass="btn btn-primary" OnClick="agregarPuesto_Click" />
             </div>
         </div>
-
 
 </asp:Content>
