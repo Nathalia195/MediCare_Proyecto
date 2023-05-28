@@ -362,3 +362,9 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /MediCare_Proyecto/Web.config
+/Datos/DatosUsuario.cs
+/.gitignore
+/.gitignore
+/MediCare_Proyecto/Paginas/Index.aspx.cs
+/MediCare_Proyecto/MediCare_Proyecto.csproj
+/Negocio/NegocioUsuario.cs
