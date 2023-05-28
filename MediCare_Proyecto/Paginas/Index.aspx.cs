@@ -1,20 +1,15 @@
-﻿using Negocio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using System;
+
 
 namespace MediCare_Proyecto
 {
     public partial class Formulario_web1 : System.Web.UI.Page
     {
 
-        NegocioGeneral obj_general = new NegocioGeneral();
         protected void Page_Load(object sender, EventArgs e)
         {
 
+<<<<<<< HEAD
             //string username = Session["username"].ToString();
            // string fullname = Session["fullname"].ToString();
            // string rol = Session["rol"].ToString();
@@ -31,6 +26,12 @@ namespace MediCare_Proyecto
             //{
             //    Response.Redirect("Login.aspx");
             //}
+=======
+            string fullname = Session["fullname"].ToString();
+          
+            Lbl_Bienvenida.Text = "Bienvenido " + fullname;
+         
+>>>>>>> 364a3a76cd3f91e55549bb4bacec7ae258512bf0
         }
     }
 }

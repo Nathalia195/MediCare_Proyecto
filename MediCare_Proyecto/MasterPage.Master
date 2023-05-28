@@ -37,7 +37,7 @@
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Index.aspx">
                 <div class="sidebar-brand-icon">
                     <br />
-                    <img style="width: 150px; height: 130px" src="../img/logo(5).png" />
+                    <img style="width: 150px; height: 130px" src="../img/logo(5).png"/>
                 </div>
                 <%-- <div class="sidebar-brand-text mx-3">MediCare <sup>SA</sup></div>--%>
             </a>

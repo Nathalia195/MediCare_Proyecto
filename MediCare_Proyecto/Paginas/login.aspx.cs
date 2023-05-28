@@ -1,14 +1,7 @@
 ﻿using Entidad;
 using Negocio;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MediCare_Proyecto
 {
@@ -17,8 +10,19 @@ namespace MediCare_Proyecto
         NegocioUsuario obj_negocio = new NegocioUsuario();
         private EntidadUsuario Usuario;
 
-        protected void Btn_Ingresar_Click(object sender, EventArgs e)
+
+        protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                Session["usuario"] = "";
+                Session["contador"] = 0;
+            }
+           
+        }
+
+            protected void Btn_Ingresar_Click(object sender, EventArgs e)
+            {
             try
             {
                 if (Usuario == null) Usuario = new EntidadUsuario();
@@ -31,11 +35,43 @@ namespace MediCare_Proyecto
 
                 if (String.IsNullOrEmpty(Mensaje))
                 {
+
+                    if (string.IsNullOrEmpty(Session["usuario"].ToString()))
+                    {
+                        Session["usuario"] = Usuario.NombreUsuario;
+
+                        Session["contador"] = Convert.ToInt32(Session["contador"].ToString()) + 1;
+                    }
+                    else
+                    {
+                        if (Session["usuario"].ToString() == Usuario.NombreUsuario)
+                        {
+                            Session["contador"] = Convert.ToInt32(Session["contador"].ToString()) + 1;
+
+                            if (Convert.ToInt32(Session["contador"].ToString()) == 3)
+                            {
+
+                                obj_negocio.BloquearUsuario(Usuario);
+                            }
+
+                        }
+                        else
+                        {
+                            Session["usuario"] = Usuario.NombreUsuario;
+
+                            Session["contador"] = Convert.ToInt32(Session["contador"].ToString()) + 1;
+                        }
+                    }
+                    Txt_usuario.Text = string.Empty;
+                    Txt_contrasena.Text = string.Empty;
                     MostrarMensaje("Usuario y/o contraseña incorrectos.");
                 }
                 else
                 {
-                    Response.Redirect("Index.aspx?MyVar=" + HttpUtility.UrlEncode(Encrypt(Mensaje)));
+                    Session["username"] = Mensaje.Split(',')[0];
+                    Session["fullname"] = Mensaje.Split(',')[1];
+                    Session["rol"] = Mensaje.Split(',')[2];
+                    Response.Redirect("Index.aspx");
                 }
             }
             catch (Exception ex)
@@ -47,36 +83,14 @@ namespace MediCare_Proyecto
         private void MostrarMensaje(string mensaje)
         {
             string message = mensaje;
-            string url = "Login.aspx";
             string script = "{ alert('";
             script += message;
-            script += "');";
-            script += "window.location = '";
-            script += url;
-            script += "'; }";
+            script += "');}";
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "alert", script, true);
         }
 
-        private string Encrypt(string clearText)
-        {
-            string EncryptionKey = "MAKV2SPBNI99212";
-            byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
-            using (Aes encryptor = Aes.Create())
-            {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
-                encryptor.Key = pdb.GetBytes(32);
-                encryptor.IV = pdb.GetBytes(16);
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(clearBytes, 0, clearBytes.Length);
-                        cs.Close();
-                    }
-                    clearText = Convert.ToBase64String(ms.ToArray());
-                }
-            }
-            return clearText;
-        }
+
+
+
     }
 }
