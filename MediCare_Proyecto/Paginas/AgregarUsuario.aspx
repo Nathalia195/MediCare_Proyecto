@@ -24,9 +24,9 @@
 
             <asp:Label ID="LblCodigoEstado" runat="server" Text="CodigoEstado"></asp:Label> 
            <asp:DropDownList ID="txtCodigoEstado" runat="server" class="form-control"></asp:DropDownList>
-     
+           
         </div>
-  
+    <asp:Button ID="txtCancelar" runat="server" Text="Cancelar" OnClick="txtCancelar_Click" />
     <asp:Button id="btnGuardarUsuario" runat="server" Text="Guardar usuario" OnClick="btnGuardarUsuario_Click" />
 
 </asp:Content>

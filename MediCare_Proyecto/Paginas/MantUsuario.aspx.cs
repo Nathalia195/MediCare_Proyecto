@@ -2,11 +2,8 @@
 using Negocio;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MediCare_Proyecto
 {
@@ -16,24 +13,19 @@ namespace MediCare_Proyecto
 
         NegocioGeneral obj_general = new NegocioGeneral();
         NegocioUsuario obj_usuario = new NegocioUsuario();
-        NegocioEstado obj_estado = new NegocioEstado();
-        NegocioRol obj_rol = new NegocioRol();
-        string url;
+      
+      
         protected void Page_Load(object sender, EventArgs e)
         {
-            string username = Session["username"].ToString();
-            string fullname = Session["fullname"].ToString();
+         
             string rol = Session["rol"].ToString();
+
             if (!IsPostBack)
             {
-                //string myVar = obj_general.Decrypt(HttpUtility.UrlDecode(Request.QueryString["MyVar"]));
-
+               
                 if (!string.IsNullOrEmpty(rol))
                 {
-                    //url = myVar;
-                    //myVar.Split(',')[0]; NombreUsuario
-                    //myVar.Split(',')[1]; NombreCompleto
-                    //myVar.Split(',')[2]; Rol
+                    
                     if (rol != "AD")
                     {
                         MostrarMensaje("Lo sentimos, usted no tiene acceso a este mantenimiento");
@@ -45,25 +37,8 @@ namespace MediCare_Proyecto
                         Dgv_usuario.DataSource = usuario;
                         Dgv_usuario.DataBind();
 
-                        //List<EntidadEstado> estado = obj_estado.GetEstado();
+                      
 
-                        //int i = 0;
-
-                        //foreach (EntidadEstado c in estado)
-                        //{
-                        //    ddl_estado.Items.Insert(i, new ListItem(c.NombreEstado, c.CodigoEstado));
-                        //    i += 1;
-                        //}
-
-                        //List<EntidadRol> rol = obj_rol.GetRol();
-
-                        //i = 0;
-
-                        //foreach (EntidadRol c in rol)
-                        //{
-                        //    ddl_rol.Items.Insert(i, new ListItem(c.NombreRol, c.CodigoRol));
-                        //    i += 1;
-                        //}
                     }
                 }
                 else
@@ -77,7 +52,7 @@ namespace MediCare_Proyecto
         private void MostrarMensaje(string mensaje)
         {
             string message = mensaje;
-            string url1 = "MantenimientoUsuario.aspx?MyVar=" + HttpUtility.UrlEncode(obj_general.Encrypt(url));
+            string url1 = "MantUsuario.aspx";
             string script = "{ alert('";
             script += message;
             script += "');";
