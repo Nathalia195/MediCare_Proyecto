@@ -10,6 +10,7 @@ namespace MediCare_Proyecto
         {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             //string username = Session["username"].ToString();
            // string fullname = Session["fullname"].ToString();
            // string rol = Session["rol"].ToString();
@@ -27,11 +28,16 @@ namespace MediCare_Proyecto
             //    Response.Redirect("Login.aspx");
             //}
 =======
+=======
+>>>>>>> 99b6111 (Crud, bloqueo, avatar de usuarios)
             string fullname = Session["fullname"].ToString();
           
             Lbl_Bienvenida.Text = "Bienvenido " + fullname;
          
+<<<<<<< HEAD
 >>>>>>> 364a3a76cd3f91e55549bb4bacec7ae258512bf0
+=======
+>>>>>>> 99b6111 (Crud, bloqueo, avatar de usuarios)
         }
     }
 }
