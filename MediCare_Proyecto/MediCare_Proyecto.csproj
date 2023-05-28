@@ -74,6 +74,7 @@
     <Content Include="css\sb-admin-2.min.css" />
     <Content Include="css\style.css" />
     <Content Include="css\stylecss.css" />
+    <Content Include="Paginas\NuevoPuesto.aspx" />
     <Content Include="Paginas\RegistrarOferentes.aspx" />
     <Content Include="Paginas\Puesto.aspx" />
     <Content Include="Paginas\Oferentes.aspx" />
@@ -1761,6 +1762,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Paginas\NuevoPuesto.aspx.cs">
+      <DependentUpon>NuevoPuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\NuevoPuesto.aspx.designer.cs">
+      <DependentUpon>NuevoPuesto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\RegistrarOferentes.aspx.cs">
       <DependentUpon>RegistrarOferentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
