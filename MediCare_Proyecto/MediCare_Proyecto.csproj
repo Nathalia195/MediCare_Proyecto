@@ -74,11 +74,11 @@
     <Content Include="css\sb-admin-2.min.css" />
     <Content Include="css\style.css" />
     <Content Include="css\stylecss.css" />
-<<<<<<< HEAD
+
     <Content Include="Paginas\NuevoPuesto.aspx" />
-=======
+
     <Content Include="Paginas\AgregarUsuario.aspx" />
->>>>>>> 99b6111 (Crud, bloqueo, avatar de usuarios)
+
     <Content Include="Paginas\RegistrarOferentes.aspx" />
     <Content Include="Paginas\Puesto.aspx" />
     <Content Include="Paginas\Oferentes.aspx" />
@@ -1766,21 +1766,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+
     <Compile Include="Paginas\NuevoPuesto.aspx.cs">
       <DependentUpon>NuevoPuesto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\NuevoPuesto.aspx.designer.cs">
       <DependentUpon>NuevoPuesto.aspx</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Paginas\AgregarUsuario.aspx.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\AgregarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
->>>>>>> 99b6111 (Crud, bloqueo, avatar de usuarios)
+99b6111 (Crud, bloqueo, avatar de usuarios)
     </Compile>
     <Compile Include="Paginas\RegistrarOferentes.aspx.cs">
       <DependentUpon>RegistrarOferentes.aspx</DependentUpon>
